@@ -1,0 +1,93 @@
+/* Pass the Glass: the colors of the app (Papier, Inkt, Kaart, Accent, Goud), light and dark. */
+:root {
+  --papier: #f6eee3;
+  --inkt: #4b1e32;
+  --tekst: #2e1520;
+  --zacht: #6b5a60;
+  --kaart: #fffbf6;
+  --lijn: #e3d6c6;
+  --accent: #7a1f3d;
+  --goud: #8f6429;
+  --code: #f1e6d6;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --papier: #1c0e15;
+    --inkt: #f6eee3;
+    --tekst: #eadfd3;
+    --zacht: #b8a7ad;
+    --kaart: #2b1620;
+    --lijn: #452a36;
+    --accent: #e3a9ba;
+    --goud: #e3b676;
+    --code: #3a2230;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--papier);
+  color: var(--tekst);
+  font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+.pagina { max-width: 760px; margin: 0 auto; padding: 0 16px 64px; }
+
+header.kop { display: flex; align-items: center; gap: 12px; padding: 20px 0 8px; }
+header.kop img { width: 44px; height: 44px; border-radius: 10px; }
+header.kop a.merk { color: var(--inkt); text-decoration: none; font: 700 20px/1.2 ui-rounded, -apple-system, sans-serif; }
+header.kop .taal { margin-left: auto; font-size: 15px; }
+
+h1, h2, h3 { color: var(--inkt); font-family: ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.2; }
+h1 { font-size: clamp(30px, 6vw, 40px); margin: 28px 0 12px; }
+h2 { font-size: 24px; margin: 44px 0 12px; }
+h3 { font-size: 19px; margin: 24px 0 8px; }
+p.inleiding { font-size: 19px; color: var(--tekst); }
+a { color: var(--accent); }
+.zacht { color: var(--zacht); }
+
+.kaart { background: var(--kaart); border: 1px solid var(--lijn); border-radius: 18px; padding: 4px 20px; margin: 16px 0; }
+.kaart.vol { padding: 16px 20px; }
+
+ol.stappen { counter-reset: stap; list-style: none; padding: 0; margin: 0; }
+ol.stappen > li { counter-increment: stap; position: relative; padding: 16px 0 16px 44px; border-bottom: 1px solid var(--lijn); }
+ol.stappen > li:last-child { border-bottom: 0; }
+ol.stappen > li::before {
+  content: counter(stap); position: absolute; left: 0; top: 16px;
+  width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: var(--papier);
+  font: 700 16px/30px ui-rounded, -apple-system, sans-serif; text-align: center;
+}
+ol.stappen strong { color: var(--inkt); }
+
+code { font: 15px/1.4 ui-monospace, "SF Mono", Menlo, monospace; background: var(--code); padding: 1px 5px; border-radius: 5px; }
+pre { background: var(--kaart); border: 1px solid var(--lijn); border-radius: 14px; padding: 16px; overflow-x: auto; font: 14px/1.5 ui-monospace, "SF Mono", Menlo, monospace; }
+pre code { background: none; padding: 0; font: inherit; }
+
+.tabel { overflow-x: auto; border: 1px solid var(--lijn); border-radius: 14px; background: var(--kaart); }
+table { border-collapse: collapse; width: 100%; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--lijn); }
+tr:last-child td { border-bottom: 0; }
+th { color: var(--inkt); font-weight: 600; }
+td:first-child { white-space: nowrap; }
+
+.probeer { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+.probeer img { width: 180px; height: 180px; background: #fff; padding: 10px; border-radius: 14px; border: 1px solid var(--lijn); }
+.probeer div { flex: 1 1 260px; }
+
+a.knop { display: inline-block; background: var(--accent); color: var(--papier); text-decoration: none; font-weight: 600; padding: 10px 18px; border-radius: 999px; margin: 4px 8px 4px 0; }
+blockquote { margin: 12px 0; padding: 12px 16px; border-left: 4px solid var(--goud); background: var(--kaart); border-radius: 0 12px 12px 0; }
+
+footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--lijn); color: var(--zacht); font-size: 15px; }
+
+/* On a phone, each row of the table becomes a small card: key, what it is in the app, what to fill in. */
+@media (max-width: 600px) {
+  .tabel table, .tabel tbody, .tabel tr, .tabel td { display: block; }
+  .tabel thead { display: none; }
+  .tabel tr { padding: 10px 14px; border-bottom: 1px solid var(--lijn); }
+  .tabel tr:last-child { border-bottom: 0; }
+  .tabel td { border: 0; padding: 2px 0; white-space: normal; }
+  .tabel td:nth-child(2) { color: var(--inkt); font-weight: 600; }
+  .tabel td[colspan] { padding-top: 6px; }
+}
