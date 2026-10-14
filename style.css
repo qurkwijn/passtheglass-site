@@ -91,3 +91,8 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--lijn);
   .tabel td:nth-child(2) { color: var(--inkt); font-weight: 600; }
   .tabel td[colspan] { padding-top: 6px; }
 }
+
+figure.beeld { margin: 20px 0; }
+figure.beeld img { display: block; width: 100%; height: auto; border-radius: 18px; }
+figure.beeld.staand img { max-width: 420px; margin: 0 auto; }
+footer p { margin: 4px 0; }
