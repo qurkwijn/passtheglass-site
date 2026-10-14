@@ -1,5 +1,5 @@
 # Voorbeeld van een wijnbox voor Pass the Glass (formaat passtheglass-box, versie 1).
-# Uitleg en alle velden: https://qurkwijn.github.io/passtheglass-site/wijnbox/
+# Uitleg en alle velden: https://passtheglass.app/wijnbox/
 # Regels die met # beginnen zijn opmerkingen: de app slaat ze over.
 
 passtheglass-box 1
