@@ -1,47 +1,49 @@
 # Voorbeeld van een wijnbox voor Pass the Glass (formaat passtheglass-box, versie 1).
 # Uitleg en alle velden: https://passtheglass.app/wijnbox/
 # Regels die met # beginnen zijn opmerkingen: de app slaat ze over.
+# De wijnen zijn verzonnen, voor het voorbeeld.
 
 passtheglass-box 1
 tasting: Borrelclub-Box oktober
 shop: QURK Wijn
 currency: EUR
 
-wine: Chianti Superiore
+wine: Colle Rosso
 vintage: 2021
 country: IT
 type: red
-producer: Burchino
+producer: Tenuta Aurelia
 grape: Sangiovese
 price: 12.95
-photo: https://cdn.sumup.store/shops/26005174/settings/333e7795-576e-489b-a9af-90c85378f56f.jpeg
+photo: https://passtheglass.app/wijnbox/etiketten/colle-rosso.jpg
 notes: Lekker bij pasta of een stuk oude kaas.
 
-wine: Vinho Verde
-vintage: 2024
-country: PT
-type: white
-producer: Quinta da Lixa
-grape: Loureiro, Alvarinho
-price: 8.50
-photo: https://cdn.sumup.store/shops/26005174/settings/6604e483-2efc-4de6-97c6-6746afdf77de.jpeg
+wine: Sierra Alta
+vintage: 2020
+country: ES
+type: red
+producer: Bodega Luz
+grape: Garnacha, Tempranillo
+price: 9.50
+photo: https://passtheglass.app/wijnbox/etiketten/sierra-alta.jpg
 
-wine: Côtes de Provence Rosé
+wine: Rosé de la Plage
 vintage: 2024
 country: FR
 type: rose
-producer: Domaine Houchart
-grape: Grenache, Cinsault
-price: 11.95
-photo: https://cdn.sumup.store/shops/26005174/settings/50145c9e-3f12-4590-93c1-0f792b012eb3.jpeg
+producer: Domaine Soleil
+grape: Grenache, Syrah
+price: 7.95
+photo: https://passtheglass.app/wijnbox/etiketten/rose-de-la-plage.jpg
 
-wine: Cava Brut Nature
-country: ES
-type: sparkling
-producer: Parés Baltà
-grape: Macabeo, Xarel·lo, Parellada
+wine: Clair de Lune
+vintage: 2023
+country: FR
+type: white
+producer: Maison Vallon
+grape: Chardonnay
 price: 14.50
-photo: https://cdn.sumup.store/shops/26005174/settings/66d608fb-77cd-4445-895b-d8cf29c34413.jpeg
-notes: Zonder jaargang, zoals bij de meeste cava.
+photo: https://passtheglass.app/wijnbox/etiketten/clair-de-lune.jpg
+notes: Mooi bij vis of een romige risotto.
 
 end
