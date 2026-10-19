@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Wijnbox voor webshops · Pass the Glass</title>
-<meta name="description" content="Verkoop je wijnboxen? Met een QR-code staan de wijnen meteen klaar in Pass the Glass. Gratis en open, voor elke webshop.">
+<title>Wijnbox voor wijnhandels · Pass the Glass</title>
+<meta name="description" content="Verkoop je wijnboxen? Met een QR-code staan de wijnen meteen klaar in Pass the Glass. QURK regelt de techniek voor je.">
 <link rel="stylesheet" href="../style.css">
 <link rel="icon" href="../app-icoon.jpg">
 <link rel="alternate" hreflang="en" href="../en/wine-box/">
@@ -20,124 +20,44 @@
 
 <h1>Je wijnbox in Pass the Glass</h1>
 <p class="inleiding">Verkoop je wijnboxen om thuis te proeven? Zet een QR-code op het kaartje in de doos. Je klant scant hem in Pass the Glass en alle wijnen staan klaar voor de proeverij, met naam, jaargang, prijs en een foto van het etiket.</p>
-<p>Aansluiten is gratis en je hoeft je nergens aan te melden. Je hebt alleen een webpagina nodig en een QR-code. Werkt vanaf versie 1.5 van de app.</p>
+<p>Jij levert de wijnen, wij regelen de techniek. Werkt vanaf versie 1.5 van de app.</p>
 
 <h2>Zo werkt het voor je klant</h2>
 <div class="kaart">
 <ol class="stappen">
   <li><strong>Nieuwe proeverij.</strong> Je klant opent Pass the Glass en kiest bij de wijnen <em>Scan wijnbox</em>.</li>
-  <li><strong>Scannen.</strong> De app leest de QR-code op het kaartje en haalt de box op van jouw website.</li>
+  <li><strong>Scannen.</strong> De app leest de QR-code op het kaartje en haalt de wijnen op.</li>
   <li><strong>Proeven.</strong> De wijnen staan klaar, de proeverij heeft de naam van je box. Proevers erbij, en de telefoon gaat rond.</li>
 </ol>
 </div>
-<p class="zacht">De uitslag blijft op de telefoon van je klant. De app stuurt niets terug naar jou en er wordt niets bijgehouden. Wil je weten welke wijn won? Vraag het op het kaartje, bijvoorbeeld via je WhatsApp of e-mail.</p>
-
-<h2>Aansluiten in vijf stappen</h2>
-<div class="kaart">
-<ol class="stappen">
-  <li><strong>Zet de etiketfoto's online.</strong> Op je eigen website, op een verborgen pagina of in een openbare Dropbox-map. Kopieer per foto het adres van de afbeelding zelf (rechtermuisknop › <em>Afbeeldingsadres kopiëren</em>), niet het adres van de pagina. Foto's zijn niet verplicht.</li>
-  <li><strong>Schrijf de box.</strong> Kopieer het <a href="#voorbeeld">voorbeeld</a> en vul je eigen wijnen in. Eén regel per gegeven, zoals <code>vintage: 2021</code>. Bij elke wijn plak je het fotoadres achter <code>photo:</code>.</li>
-  <li><strong>Zet de box online.</strong> Dat kan op drie manieren:
-    <ul>
-      <li>als tekstbestand (<code>.txt</code>) op je website;</li>
-      <li>als tekst op een webpagina, bijvoorbeeld een pagina die niet in je menu staat. Elke regel moet op een eigen regel blijven staan;</li>
-      <li>als openbare Dropbox-link naar het tekstbestand. Kies bij delen "Iedereen met de link"; een link die alleen voor jou werkt, geeft in de app "Dit is geen wijnbox".</li>
-    </ul>
-    Het adres moet met <code>https://</code> beginnen.</li>
-  <li><strong>Maak een QR-code van dat adres.</strong> Met elke gratis QR-maker. Zet hem op het kaartje in de doos, samen met een korte uitleg (zie de <a href="#kaartje">tips</a>).</li>
-  <li><strong>Test het.</strong> Scan de QR-code zelf in Pass the Glass: <em>Proeverijen › Nieuwe proeverij › Scan wijnbox</em>. Zie je je wijnen, dan werkt het.</li>
-</ol>
-</div>
-<p class="zacht">Na het drukken van de kaartjes kun je de box nog aanpassen, bijvoorbeeld een tikfout of een andere wijn. De QR-code blijft hetzelfde, zolang het adres niet verandert. Laat de pagina staan zolang je klanten de box nog proeven.</p>
-
-<h2>Het formaat</h2>
-<p>Een box is gewone tekst. De eerste regel is altijd <code>passtheglass-box 1</code>. Daarna komen de gegevens van de box, en dan de wijnen. Elke wijn begint met <code>wine:</code>; alle regels eronder horen bij die wijn, tot de volgende <code>wine:</code>.</p>
-
-<div class="tabel">
-<table>
-  <thead><tr><th>Sleutel</th><th>In de app</th><th>Wat je invult</th></tr></thead>
-  <tbody>
-    <tr><td colspan="3"><strong>De box</strong> (één keer, bovenaan)</td></tr>
-    <tr><td><code>passtheglass-box 1</code></td><td>Herkenning</td><td>Verplicht, als eerste regel.</td></tr>
-    <tr><td><code>tasting</code></td><td>Naam van de proeverij</td><td>Tekst, tot 60 tekens. Precies zoals je hem schrijft, bijvoorbeeld <code>Borrelclub-Box oktober</code>.</td></tr>
-    <tr><td><code>shop</code></td><td>Je naam, na het scannen</td><td>Tekst, tot 40 tekens.</td></tr>
-    <tr><td><code>currency</code></td><td>Munteenheid van de prijzen</td><td><code>EUR</code>, <code>USD</code>, <code>GBP</code>… Zonder deze regel: euro.</td></tr>
-    <tr><td colspan="3"><strong>Een wijn</strong> (zo vaak als nodig, tot 30 wijnen)</td></tr>
-    <tr><td><code>wine</code></td><td>Naam van de wijn</td><td>Verplicht. Tekst, tot 80 tekens. Zonder jaargang: die zet je bij <code>vintage</code>.</td></tr>
-    <tr><td><code>vintage</code></td><td>Jaargang</td><td>Een jaar, zoals <code>2021</code>.</td></tr>
-    <tr><td><code>country</code></td><td>Herkomst, met vlag</td><td>Landcode van twee letters: <code>FR</code>, <code>IT</code>, <code>ES</code>, <code>PT</code>, <code>DE</code>, <code>AT</code>, <code>ZA</code>, <code>CL</code>, <code>AR</code>, <code>AU</code>, <code>NZ</code>, <code>US</code>…</td></tr>
-    <tr><td><code>type</code></td><td>Soort</td><td><code>white</code>, <code>red</code>, <code>rose</code> of <code>sparkling</code>.</td></tr>
-    <tr><td><code>producer</code></td><td>Producent</td><td>Tekst.</td></tr>
-    <tr><td><code>grape</code></td><td>Druif</td><td>Tekst; meerdere druiven met komma's.</td></tr>
-    <tr><td><code>price</code></td><td>Prijs per fles</td><td><code>12.95</code> of <code>12,95</code>, zonder valutateken. Met prijzen wijst de uitslag de <em>Beste koop</em> aan.</td></tr>
-    <tr><td><code>photo</code></td><td>Foto van het etiket</td><td>Adres van een jpg, png of heic, beginnend met <code>https://</code>. Tot 5 MB.</td></tr>
-    <tr><td><code>notes</code></td><td>Opmerkingen</td><td>Eén regel tekst, bijvoorbeeld een spijstip.</td></tr>
-    <tr><td><code>end</code></td><td>Einde van de box</td><td>Optioneel. Handig op een webpagina: alles daarna slaat de app over.</td></tr>
-  </tbody>
-</table>
-</div>
-
-<h3>Goed om te weten</h3>
-<ul>
-  <li>Alleen <code>passtheglass-box 1</code> en een <code>wine:</code> per wijn zijn nodig. Alle andere regels mag je weglaten.</li>
-  <li>Regels die met <code>#</code> beginnen zijn opmerkingen. Lege regels mogen overal.</li>
-  <li>Klopt een waarde niet (jaargang <code>3021</code>, land <code>Italië</code> in plaats van <code>IT</code>), dan laat de app dat veld leeg. De wijn komt er wel in.</li>
-  <li>De sleutels zijn Engels, zodat webshops in elk land hetzelfde formaat gebruiken. Hoofdletters maken niet uit.</li>
-  <li>Prijzen komen alleen mee als de telefoon dezelfde munteenheid gebruikt. Een Amerikaanse klant ziet bij een box in euro dus geen prijzen.</li>
-  <li>Blind of open proeven kiest je klant zelf in de app.</li>
-</ul>
-
-<h2 id="voorbeeld">Voorbeeld</h2>
-<p>Een box met vier wijnen. De eerste wijn heeft alle velden; bij de andere zie je dat je velden mag weglaten. Kopieer de tekst hieronder, of <a href="voorbeeld.txt" download>download het volledige voorbeeld</a> met alle velden en etiketfoto's. De wijnen zijn verzonnen.</p>
-<pre><code>passtheglass-box 1
-tasting: Borrelclub-Box oktober
-shop: QURK Wijn
-currency: EUR
-
-wine: Colle Rosso
-vintage: 2021
-country: IT
-type: red
-producer: Tenuta Aurelia
-grape: Sangiovese
-price: 12.95
-photo: https://www.jouwwebshop.nl/fotos/colle-rosso.jpg
-notes: Lekker bij pasta of een stuk oude kaas.
-
-wine: Sierra Alta
-vintage: 2020
-country: ES
-type: red
-price: 9.50
-
-wine: Rosé de la Plage
-country: FR
-type: rose
-price: 7.95
-
-wine: Clair de Lune
-type: white
-grape: Chardonnay
-
-end</code></pre>
+<p class="zacht">De app is gratis voor je klant. De uitslag blijft op diens telefoon: de app stuurt niets terug en er wordt niets bijgehouden. Wil je weten welke wijn won? Vraag het op het kaartje, bijvoorbeeld via je WhatsApp of e-mail.</p>
 
 <div class="kaart vol probeer">
-  <img src="voorbeeld-qr.png" alt="QR-code van het voorbeeld">
+  <img src="voorbeeld-qr.png" alt="QR-code van een voorbeeldbox">
   <div>
     <h3>Probeer het zelf</h3>
-    <p>Scan deze QR-code in Pass the Glass, bij <em>Nieuwe proeverij › Scan wijnbox</em>. Je krijgt de vier wijnen uit het voorbeeld, met foto's.</p>
+    <p>Scan deze QR-code in Pass the Glass, bij <em>Nieuwe proeverij › Scan wijnbox</em>. Je krijgt een voorbeeldbox met vier verzonnen wijnen, met foto's van de etiketten.</p>
   </div>
 </div>
 
-<h2 id="kaartje">Tips voor het kaartje</h2>
-<p>Zet naast de QR-code een korte uitleg. Bijvoorbeeld:</p>
-<blockquote>Proef deze box samen met Pass the Glass. Open de app, kies <em>Nieuwe proeverij › Scan wijnbox</em> en scan deze code. Nog geen app? Zoek "Pass the Glass" in de App Store.</blockquote>
-<p>Scant iemand de code met de gewone camera van de iPhone, dan opent het adres in de browser. Zet je de box op een webpagina, dan kun je daar ook een link naar de app zetten.</p>
+<h2>Wat wij voor je doen</h2>
+<div class="kaart">
+<ol class="stappen">
+  <li><strong>Jij stuurt de wijnlijst.</strong> Een mail of een spreadsheet is genoeg: de wijnen, jaargangen en prijzen, en als je wilt foto's van de etiketten en een spijstip.</li>
+  <li><strong>Wij maken de box.</strong> We zetten je wijnen in de app-vorm, met je naam en de naam van de box, en zetten hem online op een vast adres.</li>
+  <li><strong>Je krijgt de QR-code.</strong> Klaar voor het drukwerk, met een korte tekst voor het kaartje. We testen de box in de app voordat je gaat drukken.</li>
+  <li><strong>Aanpassen kan altijd.</strong> Een tikfout of een andere wijn in de doos? Wij passen het aan; de QR-code op je kaartjes blijft gewoon werken.</li>
+</ol>
+</div>
 
-<h2>Vragen?</h2>
-<p>Werkt iets niet, of mis je een veld? Mail naar qurk.wijn@gmail.com.</p>
+<h2>Wat het kost</h2>
+<p>Dat hangt af van hoeveel boxen je maakt en hoe vaak ze wisselen. Mail ons wat je van plan bent, dan maken we een voorstel dat bij je winkel past.</p>
+<p><a class="knop" href="mailto:qurk.wijn@gmail.com?subject=Wijnbox%20in%20Pass%20the%20Glass">Mail QURK</a></p>
 
-<footer>Pass the Glass is gemaakt door QURK uit Poeldijk. Het wijnboxformaat is open: je mag het vrij gebruiken.</footer>
+<h3>Liever zelf doen?</h3>
+<p>Dat kan ook, en is gratis: je hebt dan een eigen webpagina en een QR-code nodig. Mail ons, dan sturen we je de handleiding.</p>
+
+<footer>Pass the Glass is gemaakt door QURK uit Poeldijk. Vragen? Mail naar qurk.wijn@gmail.com.</footer>
 </div>
 </body>
 </html>
