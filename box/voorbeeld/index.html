@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voorbeeldbox · Pass the Glass</title>
+<meta name="robots" content="noindex">
+<meta name="apple-itunes-app" content="app-id=6819401169, app-argument=https://passtheglass.app/box/voorbeeld/">
+<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="../../app-icoon.jpg">
+<style>
+  /* One view per kind of device; the script picks it. Without a script: the iPhone view, which helps everyone a bit. */
+  .weergave { display: none; }
+  html:not(.klaar) .weergave.iphone { display: block; }
+  html.iphone .weergave.iphone, html.telefoon .weergave.telefoon, html.computer .weergave.computer { display: block; }
+  /* Both languages are in the page; the phone's language decides. */
+  html.en [lang="nl"], html:not(.en) [lang="en"] { display: none; }
+  .box-naam { color: var(--zacht); font-size: 17px; margin: -4px 0 20px; }
+  .qr { width: 220px; height: 220px; background: #fff; padding: 12px; border-radius: 14px; border: 1px solid var(--lijn); }
+</style>
+<script>
+  (function () {
+    var root = document.documentElement;
+    var ua = navigator.userAgent;
+    // iPadOS presents itself as a Mac; a Mac has no touch screen.
+    var iphone = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+    var telefoon = /Android|Mobi/.test(ua) || matchMedia("(pointer: coarse) and (hover: none)").matches;
+    root.classList.add("klaar", iphone ? "iphone" : telefoon ? "telefoon" : "computer");
+    var taal = (navigator.languages && navigator.languages[0]) || navigator.language || "nl";
+    if (!/^nl\b/i.test(taal)) { root.classList.add("en"); root.lang = "en"; }
+  })();
+</script>
+</head>
+<body>
+<div class="pagina">
+
+<header class="kop">
+  <img src="../../app-icoon.jpg" alt="">
+  <span class="merk" style="color: var(--inkt); font: 700 20px/1.2 ui-rounded, -apple-system, sans-serif;">Pass the Glass</span>
+</header>
+
+<!-- iPhone and iPad: only the app. -->
+<section class="weergave iphone">
+  <h1><span lang="nl">Proef deze wijnbox samen</span><span lang="en">Taste this wine box together</span></h1>
+  <p class="box-naam">Voorbeeldbox · QURK Wijn</p>
+  <p class="inleiding" lang="nl">Deze wijnbox proef je met Pass the Glass. De wijnen staan meteen klaar: proevers erbij, en de telefoon gaat rond.</p>
+  <p class="inleiding" lang="en">You taste this wine box with Pass the Glass. The wines are ready right away: add the tasters and pass the phone around.</p>
+  <p><a class="knop" href="https://apps.apple.com/nl/app/pass-the-glass/id6819401169"><span lang="nl">Gratis in de App Store</span><span lang="en">Free on the App Store</span></a></p>
+  <div class="kaart vol">
+    <h3 lang="nl">Heb je de app al?</h3>
+    <h3 lang="en">Already have the app?</h3>
+    <p lang="nl">Open Pass the Glass, kies <em>Nieuwe proeverij › Scan wijnbox</em> en scan de QR-code op het kaartje nog een keer.</p>
+    <p lang="en">Open Pass the Glass, choose <em>New Tasting › Scan Wine Box</em> and scan the QR code on the card again.</p>
+  </div>
+</section>
+
+<!-- Android and other phones: the web app comes here. -->
+<section class="weergave telefoon">
+  <h1><span lang="nl">Proef deze wijnbox samen</span><span lang="en">Taste this wine box together</span></h1>
+  <p class="box-naam">Voorbeeldbox · QURK Wijn</p>
+  <p class="inleiding" lang="nl">Binnenkort proef je deze box hier, in je browser. Eén telefoon gaat rond de tafel en aan het eind onthul je samen de winnaar.</p>
+  <p class="inleiding" lang="en">Soon you can taste this box right here, in your browser. One phone goes around the table, and at the end you reveal the winner together.</p>
+</section>
+
+<!-- A computer: to the phone. -->
+<section class="weergave computer">
+  <h1><span lang="nl">Open dit op je telefoon</span><span lang="en">Open this on your phone</span></h1>
+  <p class="box-naam">Voorbeeldbox · QURK Wijn</p>
+  <p lang="nl">Een proeverij met Pass the Glass doe je met één telefoon die rondgaat. Scan deze QR-code met de camera van je telefoon.</p>
+  <p lang="en">A Pass the Glass tasting uses one phone that goes around the table. Scan this QR code with your phone's camera.</p>
+  <img class="qr" src="qr.png" alt="QR-code van deze wijnbox">
+</section>
+
+<footer>
+  <p lang="nl">Pass the Glass is gemaakt door QURK uit Poeldijk. <a href="../../">Over de app</a> · <a href="../../privacy/">Privacy</a></p>
+  <p lang="en">Pass the Glass is made by QURK from Poeldijk. <a href="../../en/">About the app</a> · <a href="../../en/privacy/">Privacy</a></p>
+</footer>
+
+<!-- The box itself, for the app (format: https://passtheglass.app/wijnbox/). The wines are
+     made up, for the example. -->
+<pre id="box" hidden>
+passtheglass-box 1
+tasting: Voorbeeldbox
+shop: QURK Wijn
+currency: EUR
+
+wine: Colle Rosso
+vintage: 2021
+country: IT
+type: red
+producer: Tenuta Aurelia
+grape: Sangiovese
+price: 12.95
+photo: https://passtheglass.app/wijnbox/etiketten/colle-rosso.jpg
+notes: Lekker bij pasta of een stuk oude kaas.
+
+wine: Sierra Alta
+vintage: 2020
+country: ES
+type: red
+producer: Bodega Luz
+grape: Garnacha, Tempranillo
+price: 9.50
+photo: https://passtheglass.app/wijnbox/etiketten/sierra-alta.jpg
+
+wine: Rosé de la Plage
+vintage: 2024
+country: FR
+type: rose
+producer: Domaine Soleil
+grape: Grenache, Syrah
+price: 7.95
+photo: https://passtheglass.app/wijnbox/etiketten/rose-de-la-plage.jpg
+
+wine: Clair de Lune
+vintage: 2023
+country: FR
+type: white
+producer: Maison Vallon
+grape: Chardonnay
+price: 14.50
+photo: https://passtheglass.app/wijnbox/etiketten/clair-de-lune.jpg
+notes: Mooi bij vis of een romige risotto.
+
+end
+</pre>
+
+</div>
+</body>
+</html>

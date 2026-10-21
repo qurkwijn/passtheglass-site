@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["7W8DVTB528.nl.passtheglass.app"],
+        "components": [
+          { "/": "/box/*", "comment": "Een wijnbox: de app opent hem als nieuwe proeverij." }
+        ]
+      }
+    ]
+  }
+}

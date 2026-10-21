@@ -9,3 +9,7 @@ via GitHub Pages. Het domein staat bij Cloudflare (DNS only, geen proxy).
 
 De QR-codes (`voorbeeld-qr.png`, `example-qr.png`) wijzen naar het adres van de voorbeeldbestanden. Bij een ander
 domein moeten ze opnieuw gemaakt worden.
+- `box/<naam>/`: één pagina per wijnbox, het adres in de QR-code. Bevat de box (verborgen, voor de app) en toont per
+  toestel iets anders: iPhone → App Store, andere telefoon → straks de webapp, computer → QR-code. `noindex`.
+  `box/voorbeeld/` is de voorbeeldbox; `qr.png` ernaast wijst naar de pagina zelf.
+- `.well-known/apple-app-site-association`: koppelt `/box/*` aan de app (Universal Links, vanaf app 1.6).
