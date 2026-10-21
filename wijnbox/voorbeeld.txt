@@ -1,8 +1,3 @@
-# Voorbeeld van een wijnbox voor Pass the Glass (formaat passtheglass-box, versie 1).
-# Uitleg en alle velden: https://passtheglass.app/wijnbox/
-# Regels die met # beginnen zijn opmerkingen: de app slaat ze over.
-# De wijnen zijn verzonnen, voor het voorbeeld.
-
 passtheglass-box 1
 tasting: Borrelclub-Box oktober
 shop: QURK Wijn

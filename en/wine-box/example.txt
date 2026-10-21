@@ -1,8 +1,3 @@
-# Example of a wine box for Pass the Glass (format passtheglass-box, version 1).
-# How it works and every field: https://passtheglass.app/en/wine-box/
-# Lines starting with # are comments: the app skips them.
-# The wines are made up, for the example.
-
 passtheglass-box 1
 tasting: Club Box October
 shop: QURK Wijn
