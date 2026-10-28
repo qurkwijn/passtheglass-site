@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proef het Verschil: Malbec · Pass the Glass</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="apple-itunes-app" content="app-id=6819401169, app-argument=https://passtheglass.app/box/qurk-proef-het-verschil-malbec-4rfcnnh8tv/">
+<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="../../app-icoon.jpg">
+<style>
+  .weergave { display: none; }
+  html:not(.klaar) .weergave.iphone { display: block; }
+  html.iphone .weergave.iphone, html.telefoon .weergave.telefoon, html.computer .weergave.computer { display: block; }
+  html.en [lang="nl"], html:not(.en) [lang="en"] { display: none; }
+  .box-naam { color: var(--zacht); font-size: 17px; margin: -4px 0 20px; }
+  .qr { width: 220px; height: 220px; background: #fff; padding: 12px; border-radius: 14px; border: 1px solid var(--lijn); }
+</style>
+<script>
+  (function () {
+    var root = document.documentElement;
+    var ua = navigator.userAgent;
+    var iphone = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+    var telefoon = /Android|Mobi/.test(ua) || matchMedia("(pointer: coarse) and (hover: none)").matches;
+    var gekozen = (location.search.match(/[?&]weergave=(iphone|telefoon|computer)\b/) || [])[1];
+    var weergave = gekozen || (iphone ? "iphone" : telefoon ? "telefoon" : "computer");
+    root.classList.add("klaar", weergave);
+    var taal = (navigator.languages && navigator.languages[0]) || navigator.language || "nl";
+    var gekozenTaal = (location.search.match(/[?&]taal=(nl|en)\b/) || [])[1];
+    if (gekozenTaal ? gekozenTaal === "en" : !/^nl\b/i.test(taal)) { root.classList.add("en"); root.lang = "en"; }
+    if (weergave === "telefoon") {
+      var css = document.createElement("link");
+      css.rel = "stylesheet";
+      css.href = "/speel/app.css";
+      document.head.appendChild(css);
+      var js = document.createElement("script");
+      js.src = "/speel/app.js";
+      js.defer = true;
+      document.head.appendChild(js);
+    }
+  })();
+</script>
+</head>
+<body>
+<div class="pagina">
+
+<header class="kop">
+  <img src="../../app-icoon.jpg" alt="">
+  <span class="merk" style="color: var(--inkt); font: 700 20px/1.2 ui-rounded, -apple-system, sans-serif;">Pass the Glass</span>
+</header>
+
+<section class="weergave iphone">
+  <h1><span lang="nl">Proef deze wijnbox samen</span><span lang="en">Taste this wine box together</span></h1>
+  <p class="box-naam">Proef het Verschil: Malbec · QURK Wijn</p>
+  <p class="inleiding" lang="nl">Deze wijnbox proef je met Pass the Glass. De wijnen staan meteen klaar: proevers erbij, en de telefoon gaat rond.</p>
+  <p class="inleiding" lang="en">You taste this wine box with Pass the Glass. The wines are ready right away: add the tasters and pass the phone around.</p>
+  <p><a class="knop" href="https://apps.apple.com/nl/app/pass-the-glass/id6819401169"><span lang="nl">Gratis in de App Store</span><span lang="en">Free on the App Store</span></a></p>
+  <div class="kaart vol">
+    <h3 lang="nl">Heb je de app al?</h3>
+    <h3 lang="en">Already have the app?</h3>
+    <p lang="nl">Open Pass the Glass, kies <em>Nieuwe proeverij › Scan wijnbox</em> en scan de QR-code op het kaartje nog een keer.</p>
+    <p lang="en">Open Pass the Glass, choose <em>New Tasting › Scan Wine Box</em> and scan the QR code on the card again.</p>
+  </div>
+</section>
+
+<section class="weergave telefoon">
+  <h1><span lang="nl">Proef deze wijnbox samen</span><span lang="en">Taste this wine box together</span></h1>
+  <p class="box-naam">Proef het Verschil: Malbec · QURK Wijn</p>
+</section>
+
+<section class="weergave computer">
+  <h1><span lang="nl">Open dit op je telefoon</span><span lang="en">Open this on your phone</span></h1>
+  <p class="box-naam">Proef het Verschil: Malbec · QURK Wijn</p>
+  <p lang="nl">Een proeverij met Pass the Glass doe je met één telefoon die rondgaat. Scan deze QR-code met de camera van je telefoon.</p>
+  <p lang="en">A Pass the Glass tasting uses one phone that goes around the table. Scan this QR code with your phone's camera.</p>
+  <img class="qr" src="qr.png" alt="QR-code">
+</section>
+
+<footer>
+  <p lang="nl">Pass the Glass is gemaakt door QURK uit Poeldijk. <a href="../../">Over de app</a> · <a href="../../privacy/">Privacy</a></p>
+  <p lang="en">Pass the Glass is made by QURK from Poeldijk. <a href="../../en/">About the app</a> · <a href="../../en/privacy/">Privacy</a></p>
+  <p>© 2026 QURK Wijn</p>
+</footer>
+
+<pre id="box" hidden>
+passtheglass-box 1
+tasting: Proef het Verschil: Malbec
+shop: QURK Wijn
+currency: EUR
+
+wine: L'allée de Chambert BIO
+country: FR
+type: red
+producer: Château de Chambert
+photo: https://passtheglass.app/box/qurk-proef-het-verschil-malbec-4rfcnnh8tv/etiketten/lallee-de-chambert-bio.jpg
+notes: Biologische Malbec, met zwarte bes, wilde aardbei en specerijen. Serveren op 16–18°C. Lekker bij: eendenborst, of cassoulet.
+
+wine: Colección Malbec
+country: AR
+type: red
+producer: Michel Torino
+photo: https://passtheglass.app/box/qurk-proef-het-verschil-malbec-4rfcnnh8tv/etiketten/malbec-michel-torino-coleccion.jpg
+notes: Zwarte pruim, donkere kers en een zachte afdronk. Serveren op 16–18°C. Lekker bij: een steak van de grill.
+
+end
+</pre>
+
+</div>
+</body>
+</html>
