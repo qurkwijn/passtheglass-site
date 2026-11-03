@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Doe mee met een proeverij · Pass the Glass</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="apple-itunes-app" content="app-id=6819401169">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../app-icoon.jpg">
+<style>
+  html.en [lang="nl"], html:not(.en) [lang="en"] { display: none; }
+  .code { font: 800 44px/1.1 ui-rounded, -apple-system, sans-serif; color: var(--inkt); letter-spacing: 1px; margin: 4px 0 20px; }
+  .code:empty { display: none; }
+</style>
+<script>
+  (function () {
+    var root = document.documentElement;
+    var taal = (navigator.languages && navigator.languages[0]) || navigator.language || "nl";
+    var gekozenTaal = (location.search.match(/[?&]taal=(nl|en)\b/) || [])[1];
+    if (gekozenTaal ? gekozenTaal === "en" : !/^nl\b/i.test(taal)) { root.classList.add("en"); root.lang = "en"; }
+  })();
+</script>
+</head>
+<body>
+<div class="pagina">
+
+<header class="kop">
+  <img src="../app-icoon.jpg" alt="">
+  <span class="merk" style="color: var(--inkt); font: 700 20px/1.2 ui-rounded, -apple-system, sans-serif;">Pass the Glass</span>
+</header>
+
+<section>
+  <h1><span lang="nl">Proef mee op je eigen telefoon</span><span lang="en">Taste along on your own phone</span></h1>
+  <p class="inleiding" lang="nl">Je bent uitgenodigd voor een proeverij met Pass the Glass. Met de app kies je je naam en geef je je score op je eigen telefoon.</p>
+  <p class="inleiding" lang="en">You’re invited to a tasting with Pass the Glass. With the app you pick your name and score on your own phone.</p>
+  <p lang="nl" class="zacht">De code van de tafel:</p>
+  <p lang="en" class="zacht">The table’s code:</p>
+  <p class="code" id="code"></p>
+  <p><a class="knop" href="https://apps.apple.com/nl/app/pass-the-glass/id6819401169"><span lang="nl">Gratis in de App Store</span><span lang="en">Free on the App Store</span></a></p>
+  <div class="kaart vol">
+    <h3 lang="nl">Heb je de app al?</h3>
+    <h3 lang="en">Already have the app?</h3>
+    <p lang="nl">Open Pass the Glass, kies <em>Doe mee met een proeverij</em> en typ de code hierboven.</p>
+    <p lang="en">Open Pass the Glass, choose <em>Join a Tasting</em> and type the code above.</p>
+  </div>
+</section>
+
+<footer>
+  <p lang="nl">Pass the Glass is gemaakt door QURK uit Poeldijk. <a href="../">Over de app</a> · <a href="../privacy/">Privacy</a></p>
+  <p lang="en">Pass the Glass is made by QURK from Poeldijk. <a href="../en/">About the app</a> · <a href="../en/privacy/">Privacy</a></p>
+  <p>© 2026 QURK Wijn</p>
+</footer>
+
+</div>
+<script>
+  // The code comes after the #, so it never reaches the server: passtheglass.app/doe-mee/#123456.
+  var code = (location.hash.match(/^#(\d{6})$/) || [])[1];
+  if (code) document.getElementById("code").textContent = code.slice(0, 3) + " - " + code.slice(3);
+</script>
+</body>
+</html>

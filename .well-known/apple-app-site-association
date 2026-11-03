@@ -12,6 +12,10 @@
           },
           {
             "/": "/box/*"
+          },
+          {
+            "/": "/doe-mee/*",
+            "comment": "Meedoen met een proeverij: /doe-mee/#123456"
           }
         ]
       }
